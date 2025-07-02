@@ -183,5 +183,100 @@ particlesJS("particles-js", {
   "retina_detect": true
 });
 
+// Typing animation for hero job title
+window.addEventListener('DOMContentLoaded', () => {
+  const el = document.querySelector('.hero-title.typing');
+  if (!el) return;
+  const fullText = `I'm a <span class="job">Software developer</span>`;
+  let i = 0;
+  el.innerHTML = '';
+  function type() {
+    if (i < fullText.length) {
+      // Add one character at a time, handling HTML tags
+      if (fullText[i] === '<') {
+        const closeIdx = fullText.indexOf('>', i);
+        el.innerHTML += fullText.slice(i, closeIdx + 1);
+        i = closeIdx + 1;
+      } else {
+        el.innerHTML += fullText[i];
+        i++;
+      }
+      setTimeout(type, 40);
+    }
+  }
+  type();
+});
+
+// Project Carousel Functionality
+window.addEventListener('DOMContentLoaded', () => {
+  const slides = document.querySelectorAll('.project-slide');
+  const leftArrow = document.querySelector('.carousel-arrow.left');
+  const rightArrow = document.querySelector('.carousel-arrow.right');
+  const dotsContainer = document.querySelector('.carousel-dots');
+  let current = 0;
+
+  function showSlide(idx) {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('active', i === idx);
+    });
+    if (dotsContainer) {
+      dotsContainer.querySelectorAll('.carousel-dot').forEach((dot, i) => {
+        dot.classList.toggle('active', i === idx);
+      });
+    }
+  }
+
+  // Create dots
+  if (dotsContainer) {
+    dotsContainer.innerHTML = '';
+    slides.forEach((_, i) => {
+      const dot = document.createElement('button');
+      dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+      dot.setAttribute('aria-label', `Go to project ${i + 1}`);
+      dot.addEventListener('click', () => {
+        current = i;
+        showSlide(current);
+      });
+      dotsContainer.appendChild(dot);
+    });
+  }
+
+  function prevSlide() {
+    current = (current - 1 + slides.length) % slides.length;
+    showSlide(current);
+  }
+  function nextSlide() {
+    current = (current + 1) % slides.length;
+    showSlide(current);
+  }
+
+  if (leftArrow) leftArrow.addEventListener('click', prevSlide);
+  if (rightArrow) rightArrow.addEventListener('click', nextSlide);
+
+  // Optional: swipe support for mobile
+  let startX = null;
+  const slidesContainer = document.querySelector('.project-slides');
+  if (slidesContainer) {
+    slidesContainer.addEventListener('touchstart', (e) => {
+      startX = e.touches[0].clientX;
+    });
+    slidesContainer.addEventListener('touchend', (e) => {
+      if (startX === null) return;
+      const dx = e.changedTouches[0].clientX - startX;
+      if (dx > 40) prevSlide();
+      else if (dx < -40) nextSlide();
+      startX = null;
+    });
+  }
+
+  showSlide(current);
+});
+
+// Set footer year dynamically
+window.addEventListener('DOMContentLoaded', () => {
+  const yearSpan = document.getElementById('footer-year');
+  if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+});
+
 
 

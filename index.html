@@ -53,21 +53,21 @@
           <div id="particles-js"></div>
           <div class="hero-text">
             <div class="hero-top">
+              <img src="./images/profile-photo.jpg" alt="Marek Hrivňák" class="hero-profile" />
               <h1><span class="name">Marek Hrivňák</span></h1>
-              <p class="hero-title">
-                I'm a <span class="job">Software developer</span>
-              </p>
+              <p class="hero-title typing">I'm a <span class="job">Software developer</span></p>
               <p class="hero-description">
                 and I do what I love, <span class="code">I code</span>
               </p>
             </div>
-          </div>
-
-          <div class="hero-bottom">
-            <a href="#about">See more about me</a>
+            <div class="hero-bottom">
+              <a href="#about">See more about me</a>
+              <a href="#contact">Let's work together!</a>
+            </div>
           </div>
         </section>
       </div>
+      <svg class="section-divider" viewBox="0 0 1440 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill="var(--section-bg)" d="M0,32 C360,64 1080,0 1440,32 L1440,64 L0,64 Z"></path></svg>
 
       <section id="about" class="about section">
         <h1>About Me</h1>
@@ -102,7 +102,18 @@
             <img src="./images/profile-photo.jpg" alt="hero" />
           </div>
         </div>
+        <div class="tech-icons">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" title="Java" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="Spring" title="Spring" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" title="TypeScript" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/svelte/svelte-original.svg" alt="Svelte" title="Svelte" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scala/scala-original.svg" alt="Scala" title="Scala" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" alt="Kotlin" title="Kotlin" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" title="Python" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" title="PostgreSQL" />
+        </div>
       </section>
+      <svg class="section-divider" viewBox="0 0 1440 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill="var(--section-bg)" d="M0,32 C360,64 1080,0 1440,32 L1440,64 L0,64 Z"></path></svg>
 
       <section id="work" class="work section">
         <h1>My Work</h1>
@@ -143,39 +154,26 @@
       <section id="experience" class="experience section">
         <div class="experience-content">
           <h1>Experience</h1>
-          <div class="experience-fields">
-            <div>
-              <h2>Study</h2>
+          <div class="experience-fields timeline">
+            <div class="experience-card study">
+              <h2><i class="fas fa-graduation-cap"></i> Study</h2>
               <ul>
-                <li>
-                  2017-2020 <br /> Bachelor's degree <br /> Brno university of technology
-                  FIT
-                </li>
-                <li>
-                  2020-2022 <br /> Master's degree <br /> Brno university of technology FIT
-                </li>
+                <li><span class="badge">2017-2020</span> <br /> Bachelor's degree <br /> Brno university of technology FIT</li>
+                <li><span class="badge">2020-2022</span> <br /> Master's degree <br /> Brno university of technology FIT</li>
               </ul>
             </div>
-            <div>
-              <h2>Work</h2>
+            <div class="experience-card work">
+              <h2><i class="fas fa-briefcase"></i> Work</h2>
               <ul>
-                <li>
-                  2022 - present <br />
-                  Medior Software Developer
-                  <br />
-                  Y Soft Corporation a.s., Brno Czechia
-                  <br />
-                  Technologies: Svelte, Typescript, Scala, Java, Python, Wicket,
-                  Cypress
+                <li><span class="badge">2022 - present</span> <br />
+                  <strong>Medior Software Developer</strong><br />
+                  Y Soft Corporation a.s., Brno Czechia<br />
+                  <span class="tech">Svelte, Typescript, Scala, Java, Python, Wicket, Cypress</span>
                 </li>
-                <li>
-                  2021-2022 <br />
-                  Junior Software Developer
-                  <br />
-                  Artin spol s.r.o, Brno Czechia
-                  <br />
-                  Technologies: Spring, Java, Kotlin, PostgreSQL, Liquibase,
-                  Vue.js
+                <li><span class="badge">2021-2022</span> <br />
+                  <strong>Junior Software Developer</strong><br />
+                  Artin spol s.r.o, Brno Czechia<br />
+                  <span class="tech">Spring, Java, Kotlin, PostgreSQL, Liquibase, Vue.js</span>
                 </li>
               </ul>
             </div>
@@ -183,76 +181,49 @@
           <div class="projects">
             <h2>Projects</h2>
             <ul>
-              <li>
-                <strong>Hotel management</strong> - Web application for hotel
-                management (Vue, Spring)
-              </li>
-              <li>
-                <strong>Vehicle make and mode recognition in image</strong> -
-                bachelor thesis (Python, Tensorflow)
-              </li>
-              <li>
-                <strong>Covid stats</strong> - Web application shows real time
-                covid stats (React)
-              </li>
-              <li>
-                <strong>Penzión hradby</strong> - Webpage for guest house (HTML,
-                CSS, JS)
-              </li>
-              <li>
-                <strong>Book social network</strong> - API for book social
-                network (spring)
-              </li>
+              <li><strong>Hotel management</strong> <span class="project-badge">Featured</span> - Web application for hotel management (Vue, Spring)</li>
+              <li><strong>Vehicle make and mode recognition in image</strong> - bachelor thesis (Python, Tensorflow)</li>
+              <li><strong>Covid stats</strong> - Web application shows real time covid stats (React)</li>
+              <li><strong>Penzión hradby</strong> - Webpage for guest house (HTML, CSS, JS)</li>
+              <li><strong>Book social network</strong> - API for book social network (spring)</li>
               <li><strong>Chess game</strong> - Game for two users (Java)</li>
-              <li>
-                <a href="https://github.com/marekhrivnak">and more ...</a>
-              </li>
+              <li><a href="https://github.com/marekhrivnak"><i class="fab fa-github"></i> and more ...</a></li>
             </ul>
           </div>
         </div>
       </section>
 
-      <section id="contact" class="contact light section">
-        <h1>Contact me</h1>
-        <div class="contact-cols">
-          <div class="contact-first">
-            <p>
-              Do you want to know more about me? Do you want to order my
-              services? Do you have any idea what I can help you with? I'd love
-              to hear you. Don't hesitate to contact me! <br />
-              Here's how you can reach me:
-            </p>
-          </div>
-          <div class="contact-second">
-            <div class="contact-content">
-              <div class="contact-tabs">
-                <div class="contact-tab">
-                  <img src="images/phone-white.png" alt="phone" width="100px" />
-                  <h3>Call me</h3>
-                  <p>
-                    Intrested in my work? Do you want to know some additional
-                    info? Just pick up your phone and call me.
-                  </p>
-                  <strong>+421 948 123 456</strong>
-                </div>
-                <div class="contact-tab">
-                  <img src="images/email-white.png" alt="phone" width="100px" />
-                  <h3>Write me an email</h3>
-                  <p>
-                    Do you want to order my services? Do you have any idea what
-                    I can help you with? Don't hesitate to write me an email!
-                  </p>
-                  <strong>marek.hrivnak7@gmail.com</strong>
-                </div>
-              </div>
-            </div>
+      <section id="contact" class="contact section" style="position:relative;">
+        <div class="contact-section-bg"></div>
+        <div class="contact-modern-card">
+          <h1>Contact Me</h1>
+          <div class="contact-cta">Do you want to know more about me? Do you want to order my services? Do you have any idea what I can help you with? I'd love to hear you.</div>
+          <p class="contact-cta">Let's connect! Reach out via your preferred method below:</p>
+          <div class="contact-accent-divider"></div>
+          <div class="contact-icons">
+            <a href="tel:+421948123456" class="contact-icon-btn" title="Call me" target="_blank">
+              <i class="fas fa-phone"></i>
+              <span>+421 948 123 456</span>
+            </a>
+            <a href="mailto:marek.hrivnak7@gmail.com" class="contact-icon-btn" title="Email me" target="_blank">
+              <i class="fas fa-envelope"></i>
+              <span>marek.hrivnak7@gmail.com</span>
+            </a>
+            <a href="https://www.linkedin.com/in/marek-hriv%C5%88%C3%A1k-7a3b3b1b3/" class="contact-icon-btn" title="LinkedIn" target="_blank">
+              <i class="fab fa-linkedin"></i>
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://github.com/marekhrivnak" class="contact-icon-btn" title="GitHub" target="_blank">
+              <i class="fab fa-github"></i>
+              <span>GitHub</span>
+            </a>
           </div>
         </div>
       </section>
       <footer>
         <div class="footer-content">
           <div class="footer-left">
-            <p>&copy; 2024 Marek Hrivňák</p>
+            <p>&copy; <span id="footer-year"></span> Marek Hrivňák</p>
           </div>
           <div class="footer-right">
             <a
